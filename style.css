@@ -1,0 +1,148 @@
+:root {
+  --sand-beige: #F5E8C7;
+  --ocean-teal: #83C5BE;
+  --soft-coral: #F2A1A1;
+  --seafoam-green: #B2E8E2;
+  --driftwood-brown: #8C7562;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--sand-beige);
+}
+
+header {
+  background-color: var(--ocean-teal);
+  padding: 2rem;
+  text-align: center;
+}
+/* header h1:hover{
+  color:var(--driftwood-brown) ;
+} */
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--driftwood-brown);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--seafoam-green);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--driftwood-brown);
+}
+
+.products {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.product-card:hover {
+  transform: translateY(-15px);
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  /* background: var(--soft-coral); */
+  margin: 0 auto 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.product-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px ;
+}
+
+.size-options {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.size-options :hover{
+  background-color: var(--soft-coral);
+}
+
+.size-option {
+  padding: 0.25rem 0.5rem;
+  background: var(--sand-beige);
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+button {
+  background: var(--ocean-teal);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: var(--driftwood-brown);
+}
+
+footer {
+  background: var(--ocean-teal);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
